@@ -24,8 +24,13 @@ function Nav() {
     return (
         <header>
 
+        {/*
+        can add this data-testid attribute to any element for querying purposes, 
+        but—whenever possible—it's best to query elements by their visible characteristics 
+        or accessibility attributes in order to mimic the user's experience.
+        */}
             <h2>
-                <a href="/">
+                <a data-testid="link" href="/">
                     <span role="img" aria-label="camera">📸</span> Oh Snap!
                 </a>
             </h2>
@@ -34,8 +39,8 @@ function Nav() {
 
                     <li className="mx-2">
 
-                        <a href="#about">
-                            About Me
+                        <a data-testid="about" href="#about">
+                            About me
                         </a>
 
                     </li>
