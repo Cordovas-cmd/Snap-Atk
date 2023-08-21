@@ -1,25 +1,15 @@
 import React from 'react';
 import { capitalizeFirstLetter } from '../../assets/utils/helpers';
-import photo from "../../assets/small/commercial/0.jpg";
+import PhotoList from '../PhotoList/PhotoList';
 
 function Gallery(props) {
-    const currentCategory = {
-        name: "commercial",
-        description: "Photos of grocery stores, food trucks, and other commercial projects",
-    }
+    const { currentCategory } = props;
 
     return (
         <section>
             <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
             <p>{currentCategory.description}</p>
-            <div className="flex-row">
-                <img
-                    src={photo}
-                    alt="Commercial Example"
-                    // we want the images to share a grid with other images rather than take up the entire page.
-                    className="img-thumbnail mx-1"
-                />
-            </div>
+            <PhotoList category={currentCategory.name} />
         </section>
     );
 }

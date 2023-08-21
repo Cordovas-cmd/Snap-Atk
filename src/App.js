@@ -6,7 +6,7 @@ import Nav from './components/Nav/Nav'
 import Gallery from './components/Gallery/Gallery'
 // returns JSX
 function App() {
-  
+
   const [categories] = useState([
     {
       name: 'commercial',
@@ -23,13 +23,13 @@ function App() {
     <div>
       
       <Nav
-      ategories={categories}
+       categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
         ></Nav>
 
       <main>
-        <Gallery></Gallery>
+       <Gallery currentCategory={currentCategory}></Gallery>
         <About></About>
 
 
