@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Snap-Atk/static/css/main.c54cec2f.chunk.css",
+    "main.js": "/Snap-Atk/static/js/main.f5f6484d.chunk.js",
+    "main.js.map": "/Snap-Atk/static/js/main.f5f6484d.chunk.js.map",
+    "runtime-main.js": "/Snap-Atk/static/js/runtime-main.4c9cf338.js",
+    "runtime-main.js.map": "/Snap-Atk/static/js/runtime-main.4c9cf338.js.map",
+    "static/js/2.86bbf46d.chunk.js": "/Snap-Atk/static/js/2.86bbf46d.chunk.js",
+    "static/js/2.86bbf46d.chunk.js.map": "/Snap-Atk/static/js/2.86bbf46d.chunk.js.map",
+    "static/js/3.9d4ac8e4.chunk.js": "/Snap-Atk/static/js/3.9d4ac8e4.chunk.js",
+    "static/js/3.9d4ac8e4.chunk.js.map": "/Snap-Atk/static/js/3.9d4ac8e4.chunk.js.map",
+    "index.html": "/Snap-Atk/index.html",
+    "static/css/main.c54cec2f.chunk.css.map": "/Snap-Atk/static/css/main.c54cec2f.chunk.css.map",
+    "static/js/2.86bbf46d.chunk.js.LICENSE.txt": "/Snap-Atk/static/js/2.86bbf46d.chunk.js.LICENSE.txt",
+    "static/media/0.jpg": "/Snap-Atk/static/media/0.b18c130d.jpg",
+    "static/media/1.jpg": "/Snap-Atk/static/media/1.ffe481f4.jpg",
+    "static/media/2.jpg": "/Snap-Atk/static/media/2.da4d6061.jpg",
+    "static/media/3.jpg": "/Snap-Atk/static/media/3.dd376ef9.jpg",
+    "static/media/4.jpg": "/Snap-Atk/static/media/4.ed3b1a69.jpg",
+    "static/media/cover-image.533ae8f6.jpg": "/Snap-Atk/static/media/cover-image.533ae8f6.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c9cf338.js",
+    "static/js/2.86bbf46d.chunk.js",
+    "static/css/main.c54cec2f.chunk.css",
+    "static/js/main.f5f6484d.chunk.js"
+  ]
+}
