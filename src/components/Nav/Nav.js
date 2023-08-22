@@ -1,76 +1,62 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { capitalizeFirstLetter } from "../../assets/utils/helpers";
 
 
-function Nav() {
+// lifting" the state to the parent component, App.js
 
-    const categories = [
-        {
-          name: "commercial",
-          description:
-            "Photos of grocery stores, food trucks, and other commercial projects",
-        },
-        { name: "portraits", description: "Portraits of people in my life" },
-        { name: "food", description: "Delicious delicacies" },
-        {
-          name: "landscape",
-          description: "Fields, farmhouses, waterfalls, and the beauty of nature",
-        },
-      ];
+function Nav(props) {
 
-      function categorySelected(name) {
-        console.log(`${name} clicked`)
-      }
+    const {
+        categories = [],
+        setCurrentCategory,
+        currentCategory,
+    } = props;
+
+    /* The main difference between useEffect and useState is that useEffect is an API that 
+    reflects the lifecycle methods of the component, such as when the component mounts, 
+    unmounts, or updates. */
+    useEffect(() => {
+        document.title = capitalizeFirstLetter(currentCategory.name);
+      }, [currentCategory]);
+
 
     return (
-        <header>
-
-        {/*
-        can add this data-testid attribute to any element for querying purposes, 
-        but—whenever possible—it's best to query elements by their visible characteristics 
-        or accessibility attributes in order to mimic the user's experience.
-        */}
+        <header className="flex-row px-1">
             <h2>
                 <a data-testid="link" href="/">
-                    <span role="img" aria-label="camera">📸</span> Oh Snap!
+                    <span role="img" aria-label="camera"> 📸</span> Oh Snap!
                 </a>
             </h2>
             <nav>
                 <ul className="flex-row">
-
                     <li className="mx-2">
-
                         <a data-testid="about" href="#about">
                             About me
                         </a>
-
                     </li>
-
-                    <li>
+                    <li className="mx-2">
                         <span>Contact</span>
                     </li>
-
-
-            {/* Whenever we map over anything in JSX, the outermost element must have a 
-            key attribute that's set to be something unique. 
-            This helps React keep track of items in the virtual DOM. */}
                     {categories.map((category) => (
-                    <li
-                    className="mx-1"
-                    key={category.name} >
-
-                        <span onClick={() => categorySelected(category.name)}>
-                        {category.name}
-                        </span>
-
-                    </li>
-      ))}
-
+                        <li
+                            className={`mx-1 ${currentCategory.name === category.name && 'navActive'
+                                }`}
+                            key={category.name}
+                        >
+                            <span
+                                onClick={() => {
+                                    setCurrentCategory(category)
+                                }}
+                            >
+                                {capitalizeFirstLetter(category.name)}
+                            </span>
+                        </li>
+                    ))}
                 </ul>
-
             </nav>
-
         </header>
     );
+
 }
 
 export default Nav;
